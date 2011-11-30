@@ -1,0 +1,5 @@
+gih的使用：
+http://help.github.com/
+
+mongodb module的使用：
+http://www.playframework.org/modules/morphia-1.2.4/home
