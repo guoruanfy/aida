@@ -1,0 +1,143 @@
+<add>
+<doc>
+  <field name="mid">1</field>
+  <field name="title">2011宝利博纳秋冬爆款搭配优惠更给力</field>
+  <field name="mdesc">2011秋冬爆款搭配，月销近万件。</field>
+   <field name="idesc">2011秋冬爆款搭配，月销近万件。</field>
+  <field name="price">497</field>
+  <field name="discount">98</field>
+  <field name="cid">1</field>
+  <field name="tstamp">1234567</field>
+</doc>
+<doc>
+  <field name="mid">2</field>
+  <field name="title">情侣套餐：女热力绒套装+男热力绒套装</field>
+  <field name="mdesc">描述为空</field>
+  <field name="idesc">描述为空</field>
+  <field name="price">654</field>
+  <field name="discount">339</field>
+  <field name="cid">1</field>
+  <field name="tstamp">1234567</field>
+</doc>
+<doc>
+  <field name="mid">4</field>
+  <field name="title">沃跃男鞋冬款 情侣冬季正品清仓日常休闲鞋韩版英伦潮流 真皮鞋子H001</field>
+  <field name="mdesc">因活动期间订单暴增，12.12之前的订单，</field>
+  <field name="idesc">因活动期间订单暴增，12.12之前的订单，</field>
+  <field name="price">655</field>
+  <field name="discount">560</field>
+   <field name="cid">3</field>
+  <field name="tstamp">1234567</field>
+</doc>
+<doc>
+  <field name="mid">5</field>
+  <field name="title">虎贝尔 汽车坐垫冬季新款 毛绒车垫汽车座垫 通用车座套 正品包邮</field>
+  <field name="mdesc">EGF非常完美全效修护眼霜20ML</field>
+  <field name="idesc">EGF非常完美全效修护眼霜20ML</field>
+  <field name="price">655</field>
+  <field name="discount">339</field>
+  <field name="cid">3</field>
+  <field name="tstamp">1234567</field>
+</doc>
+<doc>
+  <field name="mid">6</field>
+  <field name="title">情侣套餐：女热力绒套装+男热力绒套装</field>
+  <field name="mdesc">描述为空</field>
+  <field name="idesc">描述为空</field>
+  <field name="price">654</field>
+  <field name="discount">339</field>
+  <field name="cid">1</field>
+  <field name="tstamp">1234567</field>
+</doc>
+<doc>
+  <field name="mid">7</field>
+  <field name="title">沃跃男鞋冬款 情侣冬季正品清仓日常休闲鞋韩版英伦潮流 真皮鞋子H001</field>
+  <field name="mdesc">因活动期间订单暴增，12.12之前的订单，</field>
+  <field name="idesc">因活动期间订单暴增，12.12之前的订单，</field>
+  <field name="price">655</field>
+  <field name="discount">560</field>
+   <field name="cid">3</field>
+  <field name="tstamp">1234567</field>
+</doc>
+<doc>
+  <field name="mid">8</field>
+  <field name="title">情侣套餐：女热力绒套装+男热力绒套装</field>
+  <field name="mdesc">描述为空</field>
+  <field name="idesc">描述为空</field>
+  <field name="price">654</field>
+  <field name="discount">339</field>
+  <field name="cid">1</field>
+  <field name="tstamp">1234567</field>
+</doc>
+<doc>
+  <field name="mid">9</field>
+  <field name="title">沃跃男鞋冬款 情侣冬季正品清仓日常休闲鞋韩版英伦潮流 真皮鞋子H001</field>
+  <field name="mdesc">因活动期间订单暴增，12.12之前的订单，</field>
+  <field name="idesc">因活动期间订单暴增，12.12之前的订单，</field>
+  <field name="price">655</field>
+  <field name="discount">560</field>
+   <field name="cid">3</field>
+  <field name="tstamp">1234567</field>
+</doc>
+<doc>
+  <field name="mid">10</field>
+  <field name="title">情侣套餐：女热力绒套装+男热力绒套装</field>
+  <field name="mdesc">描述为空</field>
+  <field name="idesc">描述为空</field>
+  <field name="price">654</field>
+  <field name="discount">339</field>
+  <field name="cid">1</field>
+  <field name="tstamp">1234567</field>
+</doc>
+<doc>
+  <field name="mid">11</field>
+  <field name="title">沃跃男鞋冬款 情侣冬季正品清仓日常休闲鞋韩版英伦潮流 真皮鞋子H001</field>
+  <field name="mdesc">因活动期间订单暴增，12.12之前的订单，</field>
+  <field name="idesc">因活动期间订单暴增，12.12之前的订单，</field>
+  <field name="price">655</field>
+  <field name="discount">560</field>
+   <field name="cid">3</field>
+  <field name="tstamp">1234567</field>
+</doc>
+<doc>
+  <field name="mid">12</field>
+  <field name="title">情侣套餐：女热力绒套装+男热力绒套装</field>
+  <field name="mdesc">描述为空</field>
+  <field name="idesc">描述为空</field>
+  <field name="price">654</field>
+  <field name="discount">339</field>
+  <field name="cid">1</field>
+  <field name="tstamp">1234567</field>
+</doc>
+<doc>
+  <field name="mid">13</field>
+  <field name="title">沃跃男鞋冬款 情侣冬季正品清仓日常休闲鞋韩版英伦潮流 真皮鞋子H001</field>
+  <field name="mdesc">因活动期间订单暴增，12.12之前的订单，</field>
+  <field name="idesc">因活动期间订单暴增，12.12之前的订单，</field>
+  <field name="price">655</field>
+  <field name="discount">560</field>
+   <field name="cid">3</field>
+  <field name="tstamp">1234567</field>
+</doc>
+<doc>
+  <field name="mid">14</field>
+  <field name="title">情侣套餐：女热力绒套装+男热力绒套装</field>
+  <field name="mdesc">描述为空</field>
+  <field name="idesc">描述为空</field>
+  <field name="price">654</field>
+  <field name="discount">339</field>
+  <field name="cid">1</field>
+  <field name="tstamp">1234567</field>
+</doc>
+<doc>
+  <field name="mid">15</field>
+  <field name="title">沃跃男鞋冬款 情侣冬季正品清仓日常休闲鞋韩版英伦潮流 真皮鞋子H001</field>
+  <field name="mdesc">因活动期间订单暴增，12.12之前的订单，</field>
+  <field name="idesc">因活动期间订单暴增，12.12之前的订单，</field>
+  <field name="price">655</field>
+  <field name="discount">560</field>
+   <field name="cid">3</field>
+  <field name="tstamp">1234567</field>
+</doc>
+</add>
+

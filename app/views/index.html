@@ -1,0 +1,132 @@
+#{extends 'main.html' /}
+#{set title:'爱搭,找出最给力的搭配' /}
+<div class="content-zone">
+    <div class="content-left">
+        <div id="content-left-up">
+            <div id="caroussel">
+                <input type="hidden" name="caroussel_delay" value="5"/>
+
+                <div>
+                    <dl>
+                        <dt><a>Christmas Gift Finder</a></dt>
+                        <dd><a><img
+                                src="/public/images/product/christmas.jpg"/></a></dd>
+                    </dl>
+                    <dl>
+                        <dt><a>Win a Nikon 1 J1
+                            Camera!</a></dt>
+                        <dd><a href=><img
+                                src="/public/images/product/camera.jpg"/></a></dd>
+                    </dl>
+                    <dl>
+                        <dt><a>Heavenly Hotels</a></dt>
+                        <dd><a><img
+                                src="/public/images/product/hotels.jpg"/></a></dd>
+                    </dl>
+                    <dl>
+                        <dt><a>The Kelkoo Newsletter</a></dt>
+                        <dd><a><img
+                                src="/public/images/product/newsletter.jpg"/></a></dd>
+                    </dl>
+                </div>
+                <dl>
+                    <dt><a href=>The best prices on top products...&nbsp;&nbsp;&nbsp;►</a>
+                    </dt>
+                    <dt><a href=>Like us on Facebook&nbsp;&nbsp;&nbsp;►</a>
+                    </dt>
+                    <dt><a href=>The best prices for a perfect
+                        weekend...&nbsp;&nbsp;&nbsp;►</a></dt>
+                    <dt><a href=>The latest offers and useful shopping tips&nbsp;&nbsp;&nbsp;►</a>
+                    </dt>
+                    <dd>4</dd>
+                    <dd>3</dd>
+                    <dd>2</dd>
+                    <dd class="active">1</dd>
+                    <div class="clear"></div>
+                </dl>
+            </div>
+        </div>
+        <div class="content-left-down">
+            <div class="content-left-meal-title">本周热门搭配</div>
+            <ul>
+                #{list items:weekHotMeals, as:'mealItem'}
+                <li>
+                    <div class="product-pair-item-outer product-border-shadow">
+                        <div class="product-pair-name">
+                            ${mealItem.name} 折扣: <span class="discount-price">${mealItem.discount}</span>
+                        </div>
+                        #{list items:mealItem.getItemsOfMeal(), as:'item'}
+                        <div class="product-pair-item">
+                            <img src="${item.purl}">
+
+                            <div class="product-pair-description">${item.memo}</div>
+                        </div>
+                        #{/list}
+                    </div>
+                </li>
+                #{/list}
+            </ul>
+        </div>
+    </div>
+    <div class="content-right">
+        <div class="hot-single-products">
+            <div class="content-right-title">今日特惠</div>
+            <div class="product-list">
+                <ul>
+                    #{list items:dayHotProducts, as:'product'}
+                    <li>
+                        <div class="product-detail-outer product-border-shadow">
+                            <a class="product-img">
+                                <img src="${product.purl}"/>
+                            </a>
+
+                            <div class="single-product-description">
+
+                                <p>${product.memo}</p>
+
+                                <p>参考折扣:<span class="discount-price">12</span></p>
+                            </div>
+                        </div>
+                    </li>
+                    #{/list}
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function() {
+
+        $(".product-pair-description").bind("mouseenter", function() {
+            showUp($(this), 40, 5);
+        });
+        $(".product-pair-description").bind("mouseleave", function() {
+            showDown($(this), 25, 5);
+        });
+    });
+
+    function showUp($elem, maxSize, deltaSize) {
+        var interval = setInterval(function() {
+            var top = parseInt($elem.css("top"));
+            var height = parseInt($elem.height());
+            if (height >= maxSize) {
+                clearInterval(interval);
+            }
+            $elem.height(height + deltaSize);
+            $elem.css("top", top - deltaSize);
+        }, 30);
+    }
+
+    function showDown($elem, minSize, deltaSize) {
+        var interval = setInterval(function() {
+            var top = parseInt($elem.css("top"));
+            var height = parseInt($elem.height());
+            if (height <= minSize) {
+                clearInterval(interval);
+            }
+            $elem.height(height - deltaSize);
+            $elem.css("top", top + deltaSize);
+        }, 30);
+    }
+</script>

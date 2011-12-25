@@ -1,0 +1,112 @@
+#{extends 'main.html' /}
+#{set title:'搭配搜索-爱搭' /}
+<div class="search-result-zone">
+    <div class="search-result-item-zone">
+        <div class="search-result-info">
+            <div class="search-result-info-left">
+                找到${sr.getFacetTotalResults()}条与"<span>${form.keyword}</span>"相关的搭配
+            </div>
+            <div class="search-result-info-right">
+                <span sort="default">相关度</span> |
+                <span sort="discount">折扣价格</span>
+            </div>
+        </div>
+        <div class="search-result-items">
+            #{list items:sr.pagedList.items, as:'mealItem'}
+            <div class="search-result-item">
+                <div class="search-item-content">
+                    <h3>${mealItem.meal.name}</h3>
+                    <ul>
+                        #{list items:mealItem.items, as:'item'}
+                        #{if item_isFirst}
+                        <li class="search-result-first-item">
+                            #{/if}
+                            #{else}
+                        <li>
+                            #{/else}
+                            <div class="search-item-img">
+                                <a href="${item.url}" target="_blank">
+                                    <img src="${item.purl}" alt="${item.memo}">
+                                </a>
+                            </div>
+                            <a href="${item.url}" target="_blank" class="search-item-title" title="${item.memo}">
+                                ${item.memo}
+                            </a>
+                            <em class="search-item-price">原价：${item.price}</em>
+                        </li>
+                        #{/list}
+                    </ul>
+                    <div class="search-item-pair-info">
+                        <p><span>套餐价格：</span> <em>${mealItem.meal.price}</em></p>
+
+                        <p><span>节省：</span> <em class="discount-price">${mealItem.meal.discount}</em></p>
+                        <a href="" target="_blank">查看套餐</a></div>
+                </div>
+            </div>
+            #{/list}
+        </div>
+        #{if sr.pagedList.pageNum>1}
+        <div class="result-page page-nums">
+            <ul>
+                #{if sr.pagedList.page>1}
+                <li><a changePage='${sr.pagedList.page - 1}' class="previous-page"
+                       onclick="javascript:gotoPage('${sr.pagedList.page - 1}')">上一页</a></li>
+                #{/if}
+                #{list items:sr.pagedList.pageShowStart..sr.pagedList.pageShowEnd, as:'i'}
+                <li>
+                    #{if sr.pagedList.page != i}
+                    <a changePage='${i}' onclick="javascript:gotoPage('${i}')">[${i}]</a>
+                    #{/if}
+                    #{else}
+                    <span class="current">${i}</span>
+                    #{/else}
+                </li>
+                #{/list}
+                #{if sr.pagedList.page < sr.pagedList.pageNum}
+                <li><a changePage='${sr.pagedList.page + 1}'
+                       onclick="javascript:gotoPage('${sr.pagedList.page + 1}')">下一页</a></li>
+                #{/if}
+            </ul>
+        </div>
+        #{/if}
+    </div>
+    <div class="search-result-facet-zone">
+        <div class="result-facet-title ">&nbsp;&nbsp;&nbsp;查询结果分类</div>
+        <span category="">全部(${sr.getFacetTotalResults()})</span>
+        #{list items:sr.getFacets().entrySet(), as:'item'}
+        <span category="${item.key}">${item.key}(${item.value})</span>
+        #{/list}
+    </div>
+</div>
+<script type="text/javascript">
+    $(function() {
+        $(".main-input").val("${form.keyword}");
+        $("#category").val("${form.category}");
+        $("#sortField").val("${form.sortField}");
+        $("#pageNo").val("${form.pageNo}");
+
+        //给排序和分类添加事件
+        $(".search-result-info-right span").live("click", function() {
+            $("#sortField").val($(this).attr("sort"));
+            $(".search-input-zone").submit();
+        });
+
+        $(".search-result-facet-zone span").live("click", function() {
+            $("#category").val($(this).attr("category"));
+            $("#pageNo").val(1);
+            $(".search-input-zone").submit();
+        });
+
+        //给排序和分类添加默认选项的样式
+        $(".search-result-info-right span[sort='${form.sortField}']")
+                .css({'background-color': '#AAB1CB'});
+        $(".search-result-facet-zone span[category='${form.category}']")
+                .css({'color':'#7187B0','font-weight':'bold'});
+
+        //添加分页的处理函数
+        window.gotoPage = function(pageNo) {
+            $("#pageNo").val(pageNo);
+            $(".search-input-zone").submit();
+        };
+    });
+</script>

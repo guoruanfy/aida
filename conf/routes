@@ -1,6 +1,11 @@
 # Routes
 # This file defines all application routes (Higher priority routes first)
 # ~~~~
+#admin
+GET  /fabricatedata                            Admin.fabricateData
+GET  /importHots                               Admin.importHotItems
+
+GET  /search                                   Application.search
 
 # Home page
 GET     /                                       Application.index

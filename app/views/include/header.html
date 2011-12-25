@@ -1,0 +1,64 @@
+<div class="header-bar">
+    <div class="header">
+        <div class="header-left">
+            <ul class="inline">
+                <!--                <li>
+                    <div class="search-title-zone">
+                        <div class="search-title"> 全部</div>
+                    </div>
+                </li>-->
+                <li>
+                    <a href="/">
+                        <img style="width:149px;height:65px" src="/public/images/logo.png"/>
+                    </a>
+                </li>
+                <li>
+                    <div>
+                        <form class="search-input-zone" action="/search">
+                            <ul class="inline">
+                                <li class="input-start">
+                                    <input class="main-input" name="keyword" value="输入套餐名称或描述">
+                                    <input type="hidden" id="category" name="category" value=""/>
+                                    <input type="hidden" id="sortField" name="sortField" value="default"/>
+                                    <input type="hidden" id="pageNo" name="pageNo" value="1"/>
+                                </li>
+                                <li class="input-end">
+                                    <span class="background">
+                                        <input type="submit" class="submit" value="搜套餐 ">
+                                    </span>
+                                    <span class="icon"></span>
+                                </li>
+                            </ul>
+                        </form>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="header-right">
+            <span>毛衣</span> <span>大衣</span> <span>皮革</span> <span>毛衣</span>
+            <span>毛衣</span>
+            <span>毛衣</span>
+            <span>毛衣</span>
+            <span>毛衣</span>
+            <span>大衣</span> <span>皮革</span> <span>毛衣</span>
+        </div>
+    </div>
+</div>
+<script>
+    $(function() {
+        $(".main-input").focus(
+                function() {
+                    var rawKeyword = $(".main-input").val();
+                    if (rawKeyword && (rawKeyword == "输入套餐名称或描述")) {
+                        $(".main-input").val("");
+                    }
+                }).blur(function() {
+                    if (!$(".main-input").val()) {
+                        $(".main-input").val("输入套餐名称或描述");
+                    }
+                });
+        $(".header-right span").live("click", function() {
+            $(".main-input").val($(this).text());
+        });
+    });
+</script>

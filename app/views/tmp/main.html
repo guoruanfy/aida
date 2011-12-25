@@ -1,0 +1,721 @@
+<!DOCTYPE html>
+
+<!--[if lt IE 7 ]>
+<html class="ie6"> <![endif]-->
+<!--[if IE 7 ]>
+<html class="ie7"> <![endif]-->
+<!--[if IE 8 ]>
+<html class="ie8"> <![endif]-->
+<!--[if IE 9 ]>
+<html class="ie9"> <![endif]-->
+<!--[if gt IE 9]>
+<html> <![endif]-->
+<!--[if !IE]><!-->
+<html> <!--<![endif]-->
+<head>
+
+
+    <title>Kelkoo Shopping Search Engine | Online shopping &amp; Price comparison</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="description"
+          content="Kelkoo helps you to find offers and reviews quickly and easily, we also provide specific shopping guides to help you buy at the best price."/>
+    <meta name="keywords"
+          content="shopping search engine, price comparison, online shopping, online product search, kelkoo product search"/>
+    <script type="text/javascript" src="jquery.min.js"></script>
+    <script type="text/javascript">
+        if (!window.jQuery) {
+            document.write(unescape("%3Cscript src='jquery.min.js' type='text/javascript'%3E%3C/script%3E"));
+        }
+    </script>
+
+
+    <script type="text/javascript" src="jquery.ui.datepicker-en-GB.min.js"></script>
+    <link rel="stylesheet" type="text/css" media="screen" href="combineHomePage-1.10.0.css"/>
+</head>
+
+
+<body data-cookie-domain=".kelkoo.co.uk"
+      data-cols="3"
+      class="results-3-cols phoenix locale-en-gb withXmasBackground">
+
+
+<!--[if IE]>
+<script type="text/javascript">
+    document.createElement('header');
+    document.createElement('footer');
+    document.createElement('section');
+    document.createElement('aside');
+    document.createElement('nav');
+    document.createElement('article');
+    document.createElement('hgroup');
+    document.createElement('heading');
+</script>
+<![endif]-->
+
+<div id="pageContainer" class="layout-3cols">
+
+
+<header id="global-header" class="global-header">
+    <section class="banner">
+        <section class="sub-nav-container grid">
+            <div class="unit sub-nav">
+                <ul class="inline">
+                    <li>
+                        <div class="generic-button button6 ie6-hide">
+                            <span class="generic-button-inner">All categories</span>
+                        </div>
+                    </li>
+                    <li>
+                        <section role="search" id="search-bar-v2" data-autosuggest="true">
+                            <form id="search-v2" role="search" action="http://shopping.kelkoo.co.uk/ctl/do/search"
+                                  method="get">
+                                <ul class="inline split-button">
+                                    <li class="split-button-start"><input type="text" id="s" class="main-input"
+                                                                          name="siteSearchQuery"
+                                                                          value="What are you shopping for?"
+                                                                          autocomplete="off"/></li>
+                                    <li class="split-button-end"><span class="background"><input type="submit"
+                                                                                                 value="Find it"
+                                                                                                 id="search-btn"
+                                                                                                 class="submit"/></span><span
+                                            class="icon">&nbsp;</span></li>
+                                </ul>
+                                <input type="hidden" name="from" value="colibri"/>
+                            </form>
+                        </section>
+                        <script type="text/javascript">
+                            if (window.K && window.K.shopping) {
+                                K.shopping.localisedSearchText = "What are you shopping for?";
+
+                                // search-bar-v2 - this cant wait dom ready
+                                if ($('#search-bar-v2').length) {
+                                    K.shopping.inputBoxHelper($('#search-bar-v2'), '#s');
+                                }
+                                // search - stop the search if input contains ___('global.what.are.you.looking.for') - this cant wait dom ready
+                                if ($("#search-bar-v2 form").length) {
+                                    $("#search-bar-v2 form").submit(function(e) {
+                                        if ($("#s").val() === K.shopping.localisedSearchText || $.trim($("#s").val()) === "") {
+                                            e.preventDefault();
+                                        }
+                                    });
+                                }
+                            }
+                        </script>
+
+                    </li>
+                </ul>
+            </div>
+            <div class="unit text">
+                &nbsp;
+            </div>
+        </section>
+    </section>
+    <ul class="categories-dropdown ie6-hide">
+        <li class="sub">
+            <a class="generic-button button6">
+                <span class="generic-button-inner">All categories</span>
+            </a>
+            <ul>
+                <li class="sub">
+                    <a href="http://www.kelkoo.co.uk/c-100334923-baby-nursery.html">
+                        Baby & Nursery </a>
+                    <ul>
+                        <li><a href="http://www.kelkoo.co.uk/c-100450823-baby-care-safety.html">Baby Care & Safety </a>
+                        </li>
+                        <li><a href="http://www.kelkoo.co.uk/c-100450223-baby-travel-carriers.html">Baby Travel &
+                            Carriers </a></li>
+                        <li><a href="http://www.kelkoo.co.uk/c-100451123-feeding-mealtimes.html">Feeding &
+                            Mealtimes </a></li>
+                        <li><a href="http://www.kelkoo.co.uk/c-100452023-nursery-furniture-accessories.html">Nursery
+                            Furniture & Accessories </a></li>
+                        <li><a href="http://www.kelkoo.co.uk/c-100052013-maternity-clothes.html">Maternity Clothes </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="sub">
+                    <a href="http://www.kelkoo.co.uk/c-172601-cars-accessories.html">
+                        Cars & Accessories </a>
+                    <ul>
+                        <li><a href="http://www.kelkoo.co.uk/c-100325323-comparisons-features.html">Comparisons &
+                            Features </a></li>
+                        <li><a href="http://www.kelkoo.co.uk/c-100372023-car-accessories.html">Car Accessories </a></li>
+                        <li><a href="http://www.kelkoo.co.uk/c-100384023-tyres.html">Tyres </a></li>
+                    </ul>
+                </li>
+                <li class="sub">
+                    <a href="http://www.kelkoo.co.uk/c-110001-computers-software.html">
+                        Computers & Software </a>
+                    <ul>
+                        <li><a href="http://www.kelkoo.co.uk/c-110701-computer-components.html">Computer Components </a>
+                        </li>
+                        <li><a href="http://www.kelkoo.co.uk/c-100326623-games-and-software.html">Games and
+                            Software </a></li>
+                        <li><a href="http://www.kelkoo.co.uk/c-100326223-computer-hardware.html">Computer Hardware </a>
+                        </li>
+                        <li><a href="http://www.kelkoo.co.uk/c-100326523-computer-peripherals.html">Computer
+                            Peripherals </a></li>
+                        <li><a href="http://www.kelkoo.co.uk/c-100326723-handhelds.html">Handhelds </a></li>
+                        <li><a href="http://www.kelkoo.co.uk/c-112801-input-devices.html">Input Devices </a></li>
+                        <li><a href="http://www.kelkoo.co.uk/c-115801-storage-media.html">Storage & Media </a></li>
+                        <li><a href="http://www.kelkoo.co.uk/c-100346323-wireless-networking.html">Wireless &
+                            Networking </a></li>
+                        <li><a href="http://www.kelkoo.co.uk/c-100398423-office-supplies.html">Office Supplies </a></li>
+                    </ul>
+                </li>
+                <li class="sub">
+                    <a href="http://www.kelkoo.co.uk/c-120501-electronics.html">
+                        Electronics </a>
+                    <ul>
+                        <li><a href="http://www.kelkoo.co.uk/c-100325523-televisions.html">Televisions </a></li>
+                        <li><a href="http://www.kelkoo.co.uk/c-100325623-photography.html">Photography </a></li>
+                        <li><a href="http://www.kelkoo.co.uk/c-122901-portable-audio.html">Portable Audio </a></li>
+                        <li><a href="http://www.kelkoo.co.uk/c-100325723-home-entertainment.html">Home
+                            Entertainment </a></li>
+                        <li><a href="http://www.kelkoo.co.uk/c-100060013-hi-fi.html">Hi-Fi </a></li>
+                        <li><a href="http://www.kelkoo.co.uk/c-120601-related-categories.html">Related Categories </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="sub">
+                    <a href="http://www.kelkoo.co.uk/c-117801-entertainment.html">
+                        Entertainment </a>
+                    <ul>
+                        <li><a href="http://www.kelkoo.co.uk/c-100801-books-magazines.html">Books & Magazines </a></li>
+                        <li><a href="http://www.kelkoo.co.uk/c-148401-movies.html">Movies </a></li>
+                        <li><a href="http://www.kelkoo.co.uk/c-152401-musical-instruments.html">Musical Instruments </a>
+                        </li>
+                        <li><a href="http://www.kelkoo.co.uk/c-150701-music.html">Music </a></li>
+                    </ul>
+                </li>
+                <li class="sub">
+                    <a href="http://www.kelkoo.co.uk/c-107301-fashion-lingerie.html">
+                        Fashion & Lingerie </a>
+                    <ul>
+                        <li><a href="http://www.kelkoo.co.uk/c-108501-childrens-clothing.html">Children's Clothing </a>
+                        </li>
+                        <li><a href="http://www.kelkoo.co.uk/c-107401-clothing-accessories.html">Clothing
+                            Accessories </a></li>
+                        <li><a href="http://www.kelkoo.co.uk/c-100484623-fancy-dress.html">Fancy Dress </a></li>
+                        <li><a href="http://www.kelkoo.co.uk/c-108701-jewellery-watches.html">Jewellery & Watches </a>
+                        </li>
+                        <li><a href="http://www.kelkoo.co.uk/c-108101-mens-fashion.html">Men's Fashion </a></li>
+                        <li><a href="http://www.kelkoo.co.uk/c-109101-shoes.html">Shoes </a></li>
+                        <li><a href="http://www.kelkoo.co.uk/c-109001-womens-fashion.html">Women's Fashion </a></li>
+                    </ul>
+                </li>
+                <li class="sub">
+                    <a href="http://www.kelkoo.co.uk/c-117901-games-consoles.html">
+                        Games & Consoles </a>
+                    <ul>
+                        <li><a href="http://www.kelkoo.co.uk/c-6513-video-games.html">Video Games </a></li>
+                        <li><a href="http://www.kelkoo.co.uk/c-112201-console-accessories.html">Console Accessories </a>
+                        </li>
+                        <li><a href="http://www.kelkoo.co.uk/c-112101-game-consoles.html">Game Consoles </a></li>
+                    </ul>
+                </li>
+                <li class="sub">
+                    <a href="http://www.kelkoo.co.uk/c-100007413-gifts-flowers.html">
+                        Gifts & Flowers </a>
+                    <ul>
+                        <li><a href="http://www.kelkoo.co.uk/c-100306223-beauty-wellness.html">Beauty & Wellness </a>
+                        </li>
+                        <li><a href="http://www.kelkoo.co.uk/c-100007613-decorations.html">Decorations </a></li>
+                        <li><a href="http://www.kelkoo.co.uk/c-100091013-events.html">Events </a></li>
+                        <li><a href="http://www.kelkoo.co.uk/c-100222623-experiences.html">Experiences </a></li>
+                        <li><a href="http://www.kelkoo.co.uk/c-100327823-gifts.html">Gifts </a></li>
+                        <li><a href="http://www.kelkoo.co.uk/c-100137713-vouchers-coupons.html">Vouchers & Coupons </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="sub">
+                    <a href="http://www.kelkoo.co.uk/c-132801-health-beauty.html">
+                        Health & Beauty </a>
+                    <ul>
+                        <li><a href="http://www.kelkoo.co.uk/c-100327623-cosmetics-perfume.html">Cosmetics &
+                            Perfume </a></li>
+                        <li><a href="http://www.kelkoo.co.uk/c-100327523-hair-care.html">Hair Care </a></li>
+                        <li><a href="http://www.kelkoo.co.uk/c-100291623-health.html">Health </a></li>
+                        <li><a href="http://www.kelkoo.co.uk/c-134201-opticals.html">Opticals </a></li>
+                        <li><a href="http://www.kelkoo.co.uk/c-133601-toiletries.html">Toiletries </a></li>
+                    </ul>
+                </li>
+                <li class="sub">
+                    <a href="http://www.kelkoo.co.uk/c-134301-home-garden.html">
+                        Home & Garden </a>
+                    <ul>
+                        <li><a href="http://www.kelkoo.co.uk/c-135001-bathrooms-accessories.html">Bathrooms &
+                            Accessories </a></li>
+                        <li><a href="http://www.kelkoo.co.uk/c-130401-food-wine.html">Food & Wine </a></li>
+                        <li><a href="http://www.kelkoo.co.uk/c-136801-furniture.html">Furniture </a></li>
+                        <li><a href="http://www.kelkoo.co.uk/c-138301-garden-leisure.html">Garden & Leisure </a></li>
+                        <li><a href="http://www.kelkoo.co.uk/c-100371823-general-household.html">General Household </a>
+                        </li>
+                        <li><a href="http://www.kelkoo.co.uk/c-136001-home-accessories.html">Home Accessories </a></li>
+                        <li><a href="http://www.kelkoo.co.uk/c-139401-home-improvement.html">Home Improvement </a></li>
+                        <li><a href="http://www.kelkoo.co.uk/c-139801-kitchen.html">Kitchen </a></li>
+                    </ul>
+                </li>
+                <li class="sub">
+                    <a href="http://www.kelkoo.co.uk/c-144601-household-appliances.html">
+                        Household Appliances </a>
+                    <ul>
+                        <li><a href="http://www.kelkoo.co.uk/c-100322923-laundry-cleaning.html">Laundry & Cleaning </a>
+                        </li>
+                        <li><a href="http://www.kelkoo.co.uk/c-100323023-refrigeration.html">Refrigeration </a></li>
+                        <li><a href="http://www.kelkoo.co.uk/c-100323223-cooking.html">Cooking </a></li>
+                        <li><a href="http://www.kelkoo.co.uk/c-146801-small-appliances.html">Small Appliances </a></li>
+                    </ul>
+                </li>
+                <li class="sub">
+                    <a href="http://www.kelkoo.co.uk/c-125301-mobiles-phones-faxes.html">
+                        Mobiles, Phones & Faxes </a>
+                    <ul>
+                        <li><a href="http://www.kelkoo.co.uk/c-100326823-mobile-phones.html">Mobile Phones </a></li>
+                        <li><a href="http://www.kelkoo.co.uk/c-100326923-phones-faxes.html">Phones & Faxes </a></li>
+                    </ul>
+                </li>
+                <li class="sub">
+                    <a href="http://www.kelkoo.co.uk/c-128001-over-18s.html">
+                        Over 18s </a>
+                    <ul>
+                        <li><a href="http://www.kelkoo.co.uk/c-100389223-adult-movies.html">Adult Movies </a></li>
+                        <li><a href="http://www.kelkoo.co.uk/c-100138813-adult-entertainment.html">Adult
+                            Entertainment </a></li>
+                    </ul>
+                </li>
+                <li class="sub">
+                    <a href="http://www.kelkoo.co.uk/c-163601-sport-fitness.html">
+                        Sport & Fitness </a>
+                    <ul>
+                        <li><a href="http://www.kelkoo.co.uk/c-165001-fitness.html">Fitness </a></li>
+                        <li><a href="http://www.kelkoo.co.uk/c-100327223-other-sports.html">Other Sports </a></li>
+                        <li><a href="http://www.kelkoo.co.uk/c-165701-racket-sports.html">Racket Sports </a></li>
+                        <li><a href="http://www.kelkoo.co.uk/c-100327023-team-sports.html">Team Sports </a></li>
+                    </ul>
+                </li>
+                <li class="sub">
+                    <a href="http://www.kelkoo.co.uk/c-168001-toys-games.html">
+                        Toys & Games </a>
+                </li>
+                <li class="sub">
+                    <a href="http://travel.kelkoo.co.uk/c-169901-travel.html">
+                        Travel </a>
+                    <ul>
+                        <li><a href="http://travel.kelkoo.co.uk/c-100248623-airport-parking.html">Airport Parking </a>
+                        </li>
+                        <li><a href="http://travel.kelkoo.co.uk/c-172301-car-hire.html">Car Hire </a></li>
+                        <li><a href="http://travel.kelkoo.co.uk/c-100020613-cheap-holidays.html">Cheap Holidays </a>
+                        </li>
+                        <li><a href="http://travel.kelkoo.co.uk/c-171101-city-breaks.html">City Breaks </a></li>
+                        <li><a href="http://travel.kelkoo.co.uk/c-171401-cruises.html">Cruises </a></li>
+                        <li><a href="http://travel.kelkoo.co.uk/c-100502023-flight-price-calendar.html">Flight Price
+                            Calendar </a></li>
+                        <li><a href="http://travel.kelkoo.co.uk/c-172201-flights.html">Flights </a></li>
+                        <li><a href="http://travel.kelkoo.co.uk/c-171701-holidays.html">Holidays </a></li>
+                        <li><a href="http://travel.kelkoo.co.uk/c-170701-hotels.html">Hotels </a></li>
+                        <li><a href="http://travel.kelkoo.co.uk/c-170201-last-minute-holidays.html">Last Minute
+                            Holidays </a></li>
+                        <li><a href="http://travel.kelkoo.co.uk/c-100378923-self-catering.html">Self Catering </a></li>
+                        <li><a href="http://travel.kelkoo.co.uk/c-100020413-skiing.html">Skiing </a></li>
+                        <li><a href="http://www.kelkoo.co.uk/c-170101-luggage.html">Luggage </a></li>
+                    </ul>
+                </li>
+                <li class="sub">
+                    <a href="http://www.kelkoo.co.uk/c-100325523-televisions.html">
+                        Televisions </a>
+                </li>
+                <li class="sub">
+                    <a href="http://www.kelkoo.co.uk/c--.html">
+                    </a>
+                </li>
+            </ul>
+        </li>
+    </ul>
+</header>
+
+<div id="page" class="phoenix-homepage">
+<section class="grid">
+<section class="unit left-col">
+    <section id="caroussel">
+        <input type="hidden" name="caroussel_delay" value="5"/>
+
+        <div>
+            <dl>
+                <dt><a >Christmas Gift Finder</a></dt>
+                <dd><a ><img
+                        src="s/content/en_GB/caroussel/images/christmas.jpg"/></a></dd>
+            </dl>
+            <dl>
+                <dt><a >Win a Nikon 1 J1
+                    Camera!</a></dt>
+                <dd><a href=><img
+                        src="s/content/en_GB/caroussel/images/camera.jpg"/></a></dd>
+            </dl>
+            <dl>
+                <dt><a >Heavenly Hotels</a></dt>
+                <dd><a ><img
+                        src="s/content/en_GB/caroussel/images/hotels.jpg"/></a></dd>
+            </dl>
+            <dl>
+                <dt><a >The Kelkoo Newsletter</a></dt>
+                <dd><a ><img
+                        src="s/content/en_GB/caroussel/images/newsletter.jpg"/></a></dd>
+            </dl>
+        </div>
+        <dl>
+            <dt><a href=>The best prices on top products...&nbsp;&nbsp;&nbsp;►</a>
+            </dt>
+            <dt><a href=>Like us on Facebook&nbsp;&nbsp;&nbsp;►</a>
+            </dt>
+            <dt><a href=>The best prices for a perfect
+                weekend...&nbsp;&nbsp;&nbsp;►</a></dt>
+            <dt><a href=>The latest offers and useful shopping tips&nbsp;&nbsp;&nbsp;►</a>
+            </dt>
+            <dd>4</dd>
+            <dd>3</dd>
+            <dd>2</dd>
+            <dd class="active">1</dd>
+            <div class="clear"></div>
+        </dl>
+    </section>
+
+
+
+    <ul class="highlighted-categories top-module">
+        <li class="highlighted-category">
+
+            <div class="grid">
+                <div class="unit first">
+                    <img src="s/content/en_GB/categoryGrid/images/hi-tech.jpg"
+                         alt="Electronics"/>
+                </div>
+                <ul class="unit">
+                    <li class="first">Electronics</li>
+                    <li>
+                        <a href="">Televisions</a></li>
+                    <li>
+                        <a href="">MP3 Players</a></li>
+                    <li>
+                        <a href="">Digital Cameras</a></li>
+                    <li>
+                        <a href="">Laptops</a></li>
+                </ul>
+            </div>
+        </li>
+        <li class="highlighted-category even">
+
+            <div class="grid">
+                <div class="unit first">
+                    <img src="s/content/en_GB/categoryGrid/images/travel.jpg" alt="Travel"/>
+                </div>
+                <ul class="unit">
+                    <li class="first">Travel</li>
+                    <li>
+                        <a href="">Flights</a></li>
+                    <li>
+                        <a href="">Holidays</a></li>
+                    <li>
+                        <a href="">Hotels</a></li>
+                    <li>
+                        <a href="">Car Hire</a></li>
+                </ul>
+            </div>
+        </li>
+        <li class="highlighted-category">
+
+            <div class="grid">
+                <div class="unit first">
+                    <img src="s/content/en_GB/categoryGrid/images/mode.jpg" alt="Fashion"/>
+                </div>
+                <ul class="unit">
+                    <li class="first">Fashion</li>
+                    <li>
+                        <a href="http://www.kelkoo.co.uk/c-109001-womens-fashion.html">Women&#039;s Fashion</a></li>
+                    <li>
+                        <a href="http://www.kelkoo.co.uk/c-108101-mens-fashion.html">Men&#039;s Fashion</a></li>
+                    <li>
+                        <a href="http://www.kelkoo.co.uk/c-108501-childrens-clothing.html">Children&#039;s Fashion</a>
+                    </li>
+                    <li>
+                        <a href="http://www.kelkoo.co.uk/c-109101-shoes.html">Shoes</a></li>
+                </ul>
+            </div>
+        </li>
+        <li class="highlighted-category even">
+
+            <div class="grid">
+                <div class="unit first">
+                    <img src="s/content/en_GB/categoryGrid/images/home-and-garden.jpg"
+                         alt="Home and Garden"/>
+                </div>
+                <ul class="unit">
+                    <li class="first">Home and Garden</li>
+                    <li>
+                        <a href="">Furniture</a></li>
+                    <li>
+                        <a href="http://www.kelkoo.co.uk/c-138301-garden-leisure.html">Garden &amp; Leisure</a></li>
+                    <li>
+                        <a href="http://www.kelkoo.co.uk/c-139401-home-improvement.html">Home Improvement</a></li>
+                    <li>
+                        <a href="http://www.kelkoo.co.uk/c-136001-home-accessories.html">Home Accessories</a></li>
+                </ul>
+            </div>
+        </li>
+    </ul>
+    <section id="newsletter-module">
+        <div class="content">
+            <form action="https://secure.kelkoo.co.uk/accountNewsletter.html" method="post">
+                <ul class="inline split-button">
+                    <li><label for="email-newsletter">Keep up to date with our latest deals & offers</label></li>
+                    <li class="split-button-start"><input type="text" id="email-newsletter" class="main-input"
+                                                          name="email" value="Your email address"/></li>
+                    <li class="split-button-end"><span class="background"><input type="submit" value="Sign up"
+                                                                                 class="submit"/></span><span
+                            class="icon">&nbsp;</span></li>
+                </ul>
+
+                <div id="newsletter-botkiller" class="hide">
+                    <div class="two-col botkiller">
+                        <div class="col-1">
+                            <label for="nothing">Please keep this field untouched</label>
+                            <input type="hidden" name="botkiller-honeypot" value="Y2JtbGxtaWhhZmxt"/>
+                            <input type="text" class="text" name="cbmllmihaflm" value=""/>
+                        </div>
+                        <div class="col-2">
+                            <label class="right-aligned" for="nothing">Please keep this field untouched</label>
+                            <input type="hidden" name="botkiller-ts" value="1323442302"/>
+                            <input type="text" class="text" name="botkiller-spinner"
+                                   value="tfsMrqCphlltCKWbkC9w4mhCELqt3XwWYwcW2XGQBIM="/>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </section>
+    <div class="clear"></div>
+</section>
+<section class="unit right-col">
+    <div class="container">
+        <div class="module product-summary-module">
+            <h2>What's Hot</h2>
+
+            <div class="module-content">
+                <ul class="product-summary">
+
+                    <li>
+                        <h3>
+                            <a href="">Nokia
+                                Lumia 800</a></h3>
+
+                        <div class="grid">
+
+                            <div class="unit product-image">
+                                <a href="">
+                                    <img src=""
+                                         width="120" height="120"/>
+                                </a>
+                            </div>
+
+                            <div class="unit">
+                                <span class="description">Nokia's latest smartphone running the windows 7 OS. Features: 8 MP camera, 1.4GHz single core processor and 3.7" display</span>
+                        
+                                                    <span class="rating">
+                                
+<span class="stars-rating-xsmall" title="Rated 4 out of 5">
+			<span class="stars-rating-xsmall-inner stars-empty" style="margin-left: 81.6%">
+                    <strong>Rated 4 out of 5</strong>
+		</span>
+	</span>                            </span>
+                                                <span class="price">
+                            <span class="label">from</span>
+                            <span class="value">£432</span>
+                        </span>
+                            </div>
+                        </div>
+                        <div class="universe-category">
+                            <span class="label">Category:</span>
+                            <span><a href="">Mobile Phone
+                                Handsets</a></span>
+                        </div>
+                    </li>
+                    <li>
+                        <h3>
+                            <a href="">Calvin
+                                Klein Forbidden Euphoria</a></h3>
+
+                        <div class="grid">
+
+                            <div class="unit product-image">
+                                <a href="">
+                                    <img src=""
+                                         width="120" height="120"/>
+                                </a>
+                            </div>
+
+                            <div class="unit">
+                                <span class="description">Calvin Klein's seductive Forbidden Euphoria is a unique fruity blend of passion fruit, raspberry and mandarin </span>
+                        
+                                                <span class="price">
+                            <span class="label">from</span>
+                            <span class="value">£32</span>
+                        </span>
+                            </div>
+                        </div>
+                        <div class="universe-category">
+                            <span class="label">Category:</span>
+                            <span><a href="">Perfumes &
+                                Aftershaves</a></span>
+                        </div>
+                    </li>
+                    <li>
+                        <h3><a href="">TomTom GO Live
+                            820</a></h3>
+
+                        <div class="grid">
+
+                            <div class="unit product-image">
+                                <a href="">
+                                    <img src=""
+                                         width="120" height="120"/>
+                                </a>
+                            </div>
+
+                            <div class="unit">
+                                <span class="description">TomTom Go Live 820 with a 4.3" display and HD traffic service</span>
+                        
+                                                    <span class="rating">
+                                
+<span class="stars-rating-xsmall" title="Rated 4.5 out of 5">
+			<span class="stars-rating-xsmall-inner  stars-half" style="margin-left: 81.6%">
+                    <strong>Rated 4.5 out of 5</strong>
+		</span>
+	</span>                            </span>
+                                                <span class="price">
+                            <span class="label">from</span>
+                            <span class="value">£151</span>
+                        </span>
+                            </div>
+                        </div>
+                        <div class="universe-category">
+                            <span class="label">Category:</span>
+                            <span><a href="">GPS</a></span>
+                        </div>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+
+
+
+
+
+    </div>
+</section>
+</section>
+</div>
+
+
+<div class="leaderboard" id="leaderboard-unanimis">
+    <script type='text/javascript'>
+        if (typeof writeDart == "function")
+            writeDart('728x90');
+    </script>
+</div>
+<footer id="pagefooter">
+
+    <div class="footer-content">
+        <hr/>
+
+        <ul id="country-misc">
+            <li class="first"><a id="gid-"
+                                 href="javascript:r8ViewLink($('#gid-')[0].getAttribute('data-encodedlink'),false);"
+                                 data-encodedlink="aHR0cDovL3d3dy5rZWxrb28uY28udWsvY29tcGFueS1wYWdlcy9hYm91dC1rZWxrb28=">About
+                Kelkoo</a></li>
+            <li><a id="gid-1" href="javascript:r8ViewLink($('#gid-1')[0].getAttribute('data-encodedlink'),false);"
+                   data-encodedlink="aHR0cDovL3ByZXNzLmtlbGtvby5jby51aw==">Press Room</a></li>
+            <li><a id="gid-2" href="javascript:r8ViewLink($('#gid-2')[0].getAttribute('data-encodedlink'),false);"
+                   data-encodedlink="aHR0cDovL2pvYnMua2Vsa29vLmNvLnVr">Jobs</a></li>
+            <li><a id="gid-3" href="javascript:r8ViewLink($('#gid-3')[0].getAttribute('data-encodedlink'),false);"
+                   data-encodedlink="aHR0cDovL3d3dy5rZWxrb28uY28udWsvY29tcGFueS1wYWdlcy9jb250YWN0LXVz">Contact Us</a>
+            </li>
+            <li><a id="gid-4" href="javascript:r8ViewLink($('#gid-4')[0].getAttribute('data-encodedlink'),false);"
+                   data-encodedlink="aHR0cDovL3d3dy5rZWxrb28uY28udWsvY29tcGFueS1wYWdlcy90b3AtZnJlcXVlbnRseS1hc2tlZC1xdWVzdGlvbnM=">FAQs</a>
+            </li>
+            <li><a id="gid-5" href="javascript:r8ViewLink($('#gid-5')[0].getAttribute('data-encodedlink'),false);"
+                   data-encodedlink="aHR0cDovL3d3dy5rZWxrb28uY28udWsvY29fNDI5Mi1vbmxpbmUtbWVyY2hhbnRzLWFuZC1zdG9yZXMtcGFydG5lci13aXRoLWtlbGtvby5odG1s">Merchant
+                informations</a></li>
+            <li><a id="gid-6" href="javascript:r8ViewLink($('#gid-6')[0].getAttribute('data-encodedlink'),false);"
+                   data-encodedlink="aHR0cDovL3d3dy5rZWxrb28uY28udWsvY29fNTA1OS1rZWxrb28tYWZmaWxpYXRlLXBhZ2VzLmh0bWw=">Affiliate
+                informations</a></li>
+            <li><a id="gid-7" href="javascript:r8ViewLink($('#gid-7')[0].getAttribute('data-encodedlink'),false);"
+                   data-encodedlink="aHR0cDovL3d3dy5rZWxrb28uY28udWsvY29fMTY3MzMtdGVybXMtb2YtdXNlLWtlbGtvby11ay5odG1s">Term
+                Of Use</a></li>
+            <li><a id="gid-8" href="javascript:r8ViewLink($('#gid-8')[0].getAttribute('data-encodedlink'),false);"
+                   data-encodedlink="aHR0cDovL3d3dy5rZWxrb28uY28udWsvY29fMTY3MzQtcHJpdmFjeS1wb2xpY3kta2Vsa29vLXVrLmh0bWw=">Privacy
+                policy</a></li>
+            <li><a id="gid-9" href="javascript:r8ViewLink($('#gid-9')[0].getAttribute('data-encodedlink'),false);"
+                   data-encodedlink="aHR0cDovL3d3dy5rZWxrb28uY28udWsvY29fMTUwODktcGFydG5lci13aXRoLXVzLWhvbWUuaHRtbA==">Partner
+                with us</a></li>
+        </ul>
+
+        <ul id="int-sites">
+            <li class="first">
+                <heading>International Sites</heading>
+            </li>
+            <li><a id="gid-10" href="javascript:r8ViewLink($('#gid-10')[0].getAttribute('data-encodedlink'),false);"
+                   data-encodedlink="aHR0cDovL2ZyLmtlbGtvby5iZS8=">Belgique FR</a></li>
+            <li><a id="gid-11" href="javascript:r8ViewLink($('#gid-11')[0].getAttribute('data-encodedlink'),false);"
+                   data-encodedlink="aHR0cDovL25sLmtlbGtvby5iZS8=">Belgie NL</a></li>
+            <li><a id="gid-12" href="javascript:r8ViewLink($('#gid-12')[0].getAttribute('data-encodedlink'),false);"
+                   data-encodedlink="aHR0cDovL3d3dy5rZWxrb28uZGsv">Danmark</a></li>
+            <li><a id="gid-13" href="javascript:r8ViewLink($('#gid-13')[0].getAttribute('data-encodedlink'),false);"
+                   data-encodedlink="aHR0cDovL3d3dy5rZWxrb28uZGUv">Deutschland</a></li>
+            <li><a id="gid-14" href="javascript:r8ViewLink($('#gid-14')[0].getAttribute('data-encodedlink'),false);"
+                   data-encodedlink="aHR0cDovL3d3dy5rZWxrb28uZXMv">España</a></li>
+            <li><a id="gid-15" href="javascript:r8ViewLink($('#gid-15')[0].getAttribute('data-encodedlink'),false);"
+                   data-encodedlink="aHR0cDovL3d3dy5rZWxrb28uZnIv">France</a></li>
+            <li><a id="gid-16" href="javascript:r8ViewLink($('#gid-16')[0].getAttribute('data-encodedlink'),false);"
+                   data-encodedlink="aHR0cDovL3d3dy5rZWxrb28uaXQv">Italia</a></li>
+            <li><a id="gid-17" href="javascript:r8ViewLink($('#gid-17')[0].getAttribute('data-encodedlink'),false);"
+                   data-encodedlink="aHR0cDovL3d3dy5rZWxrb28ubmwv">Nederland</a></li>
+            <li><a id="gid-18" href="javascript:r8ViewLink($('#gid-18')[0].getAttribute('data-encodedlink'),false);"
+                   data-encodedlink="aHR0cDovL3d3dy5rZWxrb28ubm8v">Norge</a></li>
+            <li><a id="gid-19" href="javascript:r8ViewLink($('#gid-19')[0].getAttribute('data-encodedlink'),false);"
+                   data-encodedlink="aHR0cDovL3d3dy5rZWxrb28uc2Uv">Sverige</a></li>
+            <li><a id="gid-20" href="javascript:r8ViewLink($('#gid-20')[0].getAttribute('data-encodedlink'),false);"
+                   data-encodedlink="aHR0cDovL3d3dy5rZWxrb28uY28udWsv">United Kingdom</a></li>
+            <li><a id="gid-21" href="javascript:r8ViewLink($('#gid-21')[0].getAttribute('data-encodedlink'),false);"
+                   data-encodedlink="aHR0cDovL3d3dy5rZWxrb28uY29tLw==">United States</a></li>
+            <li><a id="gid-22" href="javascript:r8ViewLink($('#gid-22')[0].getAttribute('data-encodedlink'),false);"
+                   data-encodedlink="aHR0cDovL3d3dy5rZWxrb28uY2Ev">Canada</a></li>
+            <li><a id="gid-23" href="javascript:r8ViewLink($('#gid-23')[0].getAttribute('data-encodedlink'),false);"
+                   data-encodedlink="aHR0cDovL2JyLmtlbGtvby5jb20v">Brasil</a></li>
+        </ul>
+        <aside id="legal">
+            <div id="footer-copyright">
+                <p id="copyright">Copyright © 2011 All rights reserved.</p>
+            </div>
+        </aside>
+    </div>
+
+
+</footer>
+</div>
+
+<script type="text/javascript">
+    (function() {
+        //cto keyword tag
+        var cto_params = [];
+        cto_params["kw"] = "";
+        if ($('#search-input').length) {
+            cto_params["kw"] = $('#search-input').attr('value');
+        } else if ($('#filters-keyword').length) {
+            cto_params["kw"] = $('#filters-keyword').attr('value');
+        }
+    })();
+</script>
+
+</body>
+</html>
+<!-- server=dc1,6 -->

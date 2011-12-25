@@ -1,0 +1,531 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title></title>
+<style>
+body {
+    width: 948px;
+    margin: 0 auto;
+    font: 13px/1.22 helvetica, clean, sans-serif;
+}
+ div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5{
+           margin: 0px;
+    padding: 0px;
+ }
+
+li{
+    list-style: none;
+}
+.inline {
+    overflow: hidden;
+    zoom: 1;
+}
+
+.inline li {
+    float: left;
+}
+
+.header-bar {
+    position: relative;
+    padding-bottom: 100px;
+}
+
+.header {
+
+    height: 109px;
+    width: 938px;
+    background: url('s/images/phoenix/header/banner-repeat-x.png') repeat-x;
+    padding-left: 10px;
+    z-index: 5;
+    position: absolute;
+}
+
+.header-left {
+    background: #EBEEF4;
+    border-radius: 6px 6px 6px 6px;
+    height: 40px;
+    position: relative;
+    padding: 10px;
+    margin-top: 20px;
+    width: 551px;
+}
+
+
+
+
+.search-title-zone, .search-title {
+    background: url('s/images/phoenix/button-sprite.png?v=2') no-repeat;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    float: left;
+}
+
+.search-title-zone {
+    background-position: 0 -238px;
+    line-height: 40px;
+    height: 40px;
+    text-decoration: none;
+    color: #425578 !important;
+    font-size: 14px;
+    margin-right: 10px;
+    padding-left: 9px;
+}
+
+.search-title-zone .search-title {
+    background-position: right -278px;
+    line-height: 40px;
+    font-family: 'HelveticaNeue', 'Arial', sans-serif;
+    padding-right: 60px;
+}
+
+
+.search-input-zone .input-start {
+    background: url('s/images/phoenix/button-sprite.png?v=2') no-repeat 0 -358px;
+    padding-left: 5px;
+    height: 40px;
+    line-height: 40px;
+}
+
+.input-start .main-input {
+    background: url('s/images/phoenix/button-sprite.png?v=2') repeat-x 0 -398px;
+    height: 40px;
+    line-height: 30px;
+    border: none;
+    padding: 0px;
+    font-weight: bold;
+    color: #ccc;
+    width: 280px;
+}
+
+.input-end {
+    height: 40px;
+    line-height: 40px;
+}
+
+.input-end .background {
+    background: url('s/images/phoenix/button-sprite.png?v=2') repeat-x 0 -438px;
+    height: 40px;
+    line-height: 40px !important;
+    float: left;
+    font-weight: bold;
+    padding: 0.9px 10px;
+    font-size: 18px;
+    overflow: hidden;
+    zoom: 1;
+}
+
+.input-end .background .submit {
+    border: none;
+    background: none;
+    color: #fff;
+    position: relative;
+    top: -2px;
+    cursor: pointer;
+    line-height: 40px !important;
+
+}
+
+.input-end .icon {
+    background: url('s/images/phoenix/button-sprite.png?v=2') no-repeat 0 -478px;
+    height: 40px;
+    line-height: 40px !important;
+    float: left;
+    width: 32px;
+}
+
+.content-zone {
+    position: relative;
+    padding: 0 3px 0 3px;
+}
+
+.content-left {
+    float: left;
+    width: 612px;
+}
+
+.content-right {
+    float: right;
+    width: 316px;
+    background: url('s/images/phoenix/homepage-gradient-left-col.png') repeat-y;
+}
+
+.hot-single-products{
+    padding: 15px 10px 15px 15px;
+}
+.product-list{
+    margin-top: 15px;
+}
+
+#caroussel {
+    padding: 0;
+    display: block;
+    width: 613px;
+    height: 349px;
+    overflow: hidden;
+    position: relative
+}
+
+#caroussel>div {
+    height: 302px;
+    width: 613px
+}
+
+#caroussel>div>dl {
+    float: left;
+    position: relative;
+    height: 302px;
+    width: 613px;
+    margin: 0;
+    padding: 0;
+    list-style: none
+}
+
+#caroussel>div>dl>dt>a {
+    position: absolute;
+    text-decoration: none;
+    top: 224px;
+    left: 0px;
+    margin: 0;
+    padding: 5px 16px;
+    background-color: #FFFFFF;
+    color: #F76321;
+    font-size: 235%;
+    font-family: 'Avenir LT W02 95 Black', 'HelveticaNeue', 'Arial', sans-serif;
+    font-weight: normal
+}
+
+#caroussel>div>dl>dt>a {
+    text-decoration: none
+}
+
+#caroussel>div>dl>dd {
+    float: left
+}
+
+#caroussel>dl {
+    height: 47px;
+    background-color: #324160;
+    background-image: -moz-linear-gradient(center top, #6077A3, #324160);
+    background: -webkit-linear-gradient(center top, #6077A3, #324160);
+    color: #FFFFFF;
+    vertical-align: middle;
+    padding-right: 5px;
+    position: absolute;
+    top: 302px;
+    width: 100%
+}
+
+#caroussel>dl>dt {
+    float: left;
+    padding: 5px 0px;
+    display: none;
+    position: relative
+}
+
+#caroussel>dl>dt>a {
+    float: left;
+    color: #FFFFFF;
+    font-size: 130%;
+    padding: 7px 12px;
+    text-decoration: none;
+    font-weight: bold
+}
+
+#caroussel>dl>dt>a:hover {
+    text-decoration: none
+}
+
+#caroussel>dl>dt:first-child {
+    display: block
+}
+
+#caroussel>dl>dd {
+    float: right;
+    display: block;
+    margin-right: 10px;
+    margin-top: 9px;
+    text-align: center;
+    border: solid 1px #7187B0;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    color: #FFFFFF;
+    font-size: 115%;
+    padding: 3px 4px 7px;
+    text-align: center;
+    font-weight: bold;
+    text-decoration: none;
+    height: 15px;
+    width: 14px;
+    cursor: pointer
+}
+
+#caroussel>dl>dd.active {
+    background-color: #AAB1CB;
+    color: #7689B1
+}
+
+
+
+.product-pair-item-outer{
+   padding: 10px 15px;
+border: 1px solid #ebebeb;
+    position: relative;
+    margin-bottom: 10px;
+}
+.product-pair-item{
+    display: inline;
+}
+
+.product-detail-outer{
+width: 232px;
+height: 300px;overflow: hidden;
+position: relative;
+
+
+background: #fff;
+box-shadow: 0 1px 3px rgba(34, 25, 25, 0.2);
+-webkit-box-shadow: rgba(34, 25, 25, 0.2) 0px 1px 3px;
+border-radius: 4px;
+-moz-border-radius: 4px;
+-webkit-border-radius: 4px;
+padding-top:13px;
+padding-left:6px;
+padding-right:6px;
+
+margin-bottom:10px;
+}
+</style>
+<script type="text/javascript" src="jquery.min.js"></script>
+<script type="text/javascript">
+
+    $(document).ready(function() {
+        var carousselItems = $("#caroussel>div>dl");
+        var bottomLayer = $("#caroussel>div");
+        var buttons = $("#caroussel>dl>dd");
+        var secondaryTexts = $("#caroussel>dl>dt");
+        var animationDelayField = $("#caroussel>input");
+        var animationDelay = (
+                animationDelayField !=
+                        null && animationDelayField.length > 0 && animationDelayField[0].getAttribute("value") ?
+                        animationDelayField[0].getAttribute("value") * 1000 : 5000
+                );
+        var itemWidth = $(carousselItems[0]).width();
+        var currentItem = 1;
+        var intervalTimer;
+        if (carousselItems == null || carousselItems.length == 0) {
+            return;
+        }
+        console.info(carousselItems.length * itemWidth);
+        bottomLayer.width(carousselItems.length * itemWidth);
+        var animateFunction = function(index, Element) {
+            var currentButton = Element;
+            var currentIndex = index;
+            var marginLeftC = -itemWidth * (index);
+            bottomLayer.animate({marginLeft:marginLeftC});
+            buttons.each(
+                    function(index, Element) {
+                        if (currentButton == Element) {
+                            Element.className = "active";
+                        }
+                        else {
+                            Element.className = "";
+                        }
+                    }
+            )
+            secondaryTexts.each(
+                    function(index, Element) {
+                        if (currentIndex == index) {
+                            $(Element).show();
+                        } else {
+                            $(Element).hide();
+                        }
+                    }
+            )
+        };
+        var resetAnimationTimer = function(currentItemIndex) {
+            if (intervalTimer) {
+                clearInterval(intervalTimer);
+            }
+            currentItem = currentItemIndex;
+            intervalTimer = setInterval(function() {
+                animateFunction(currentItem, buttons[buttons.length - currentItem - 1]);
+                currentItem = (currentItem + 1) % carousselItems.length;
+            }, animationDelay);
+        };
+        carousselItems.each(function(index, Element) {
+            $(Element).mouseover(function(event) {
+                if (intervalTimer) {
+                    clearInterval(intervalTimer);
+                }
+            });
+            $(Element).mouseout(function(event) {
+                event.stopPropagation();
+                resetAnimationTimer((index + 1) % carousselItems.length);
+            });
+        });
+
+        buttons.each(function(index, Element) {
+            $(Element).click(function(event) {
+                resetAnimationTimer((buttons.length - index) % carousselItems.length);
+                animateFunction(buttons.length - index - 1, Element);
+            });
+        });
+        resetAnimationTimer(1);
+    });
+</script>
+</head>
+<body>
+<div class="header-bar">
+    <div class="header">
+        <div class="header-left">
+            <ul class="inline">
+                <li>
+                    <div class="search-title-zone">
+                        <div class="search-title"> 全部</div>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <form class="search-input-zone">
+                            <ul class="inline">
+                                <li class="input-start">
+                                    <input class="main-input" value="输入关键字搜索">
+                                </li>
+                                <li class="input-end">
+                                    <span class="background">
+                                        <input type="submit" class="submit" value="find it">
+                                    </span>
+                                    <span class="icon"></span>
+                                </li>
+                            </ul>
+                        </form>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div></div>
+    </div>
+</div>
+
+<div class="content-zone">
+    <div class="content-left">
+        <div id="content-left-up">
+            <div id="caroussel">
+                <input type="hidden" name="caroussel_delay" value="5"/>
+
+                <div>
+                    <dl>
+                        <dt><a>Christmas Gift Finder</a></dt>
+                        <dd><a><img
+                                src="s/content/en_GB/caroussel/images/christmas.jpg"/></a></dd>
+                    </dl>
+                    <dl>
+                        <dt><a>Win a Nikon 1 J1
+                            Camera!</a></dt>
+                        <dd><a href=><img
+                                src="s/content/en_GB/caroussel/images/camera.jpg"/></a></dd>
+                    </dl>
+                    <dl>
+                        <dt><a>Heavenly Hotels</a></dt>
+                        <dd><a><img
+                                src="s/content/en_GB/caroussel/images/hotels.jpg"/></a></dd>
+                    </dl>
+                    <dl>
+                        <dt><a>The Kelkoo Newsletter</a></dt>
+                        <dd><a><img
+                                src="s/content/en_GB/caroussel/images/newsletter.jpg"/></a></dd>
+                    </dl>
+                </div>
+                <dl>
+                    <dt><a href=>The best prices on top products...&nbsp;&nbsp;&nbsp;►</a>
+                    </dt>
+                    <dt><a href=>Like us on Facebook&nbsp;&nbsp;&nbsp;►</a>
+                    </dt>
+                    <dt><a href=>The best prices for a perfect
+                        weekend...&nbsp;&nbsp;&nbsp;►</a></dt>
+                    <dt><a href=>The latest offers and useful shopping tips&nbsp;&nbsp;&nbsp;►</a>
+                    </dt>
+                    <dd>4</dd>
+                    <dd>3</dd>
+                    <dd>2</dd>
+                    <dd class="active">1</dd>
+                    <div class="clear"></div>
+                </dl>
+            </div>
+        </div>
+        <div id="content-left-down">
+        <h2>搭配优惠</h2>
+            <ul>
+                <li>
+                       <div class="product-pair-item-outer">
+                           <div class="product-pair-item"><img src="product1.jpg"></div>
+                            <div class="product-pair-item"><img src="product2.jpg"></div>
+                           <div class="product-pair-item"><img src="product3.jpg"></div>
+                       </div>
+                </li>
+                <li>
+                    <div class="product-pair-item-outer">
+                        <div class="product-pair-item"><img src="product1.jpg"></div>
+                            <div class="product-pair-item"><img src="product2.jpg"></div>
+                           <div class="product-pair-item"><img src="product3.jpg"></div>
+                       </div>
+               </li><li>
+                    <div class="product-pair-item-outer">
+                        <div class="product-pair-item"><img src="product1.jpg"></div>
+                            <div class="product-pair-item"><img src="product2.jpg"></div>
+                           <div class="product-pair-item"><img src="product3.jpg"></div>
+                       </div>
+
+
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="content-right">
+        <div class="hot-single-products">
+           <h2>今日特惠</h2>
+           <div class="product-list">
+             <ul>
+                 <li>
+                 <div class="product-detail-outer" >
+                        <a class="product-img" style="text-align: center;
+                        display: block;">
+                            <img src="product.jpg" style="width:220px;height:220px"/>
+                        </a>
+                        <h4 style="padding-left:6px">商品名称</h4>
+                        <p style="padding-left:6px">时尚博主，美容达人</p>
+                 </div>
+                 </li>
+                                  <li>
+                 <div class="product-detail-outer" >
+                        <a class="product-img" style="text-align: center;
+                        display: block;">
+                            <img src="product.jpg" style="width:220px;height:220px"/>
+                        </a>
+                        <h4 style="padding-left:6px">商品名称</h4>
+                        <p style="padding-left:6px">时尚博主，美容达人</p>
+                 </div>
+                 </li>
+                                                   <li>
+                 <div class="product-detail-outer" >
+                        <a class="product-img" style="text-align: center;
+                        display: block;">
+                            <img src="product.jpg" style="width:220px;height:220px"/>
+                        </a>
+                        <h4 style="padding-left:6px">商品名称</h4>
+                        <p style="padding-left:6px">时尚博主，美容达人</p>
+                 </div>
+                 </li>
+             </ul>
+           </div>
+        </div>
+    </div>
+</div>
+<div style="clear: both;"></div>
+<div id="footer" style="border-top: solid 1px #454545">
+    Copyright © 2011 All rights reserved.
+</div>
+</body>
+</html>
